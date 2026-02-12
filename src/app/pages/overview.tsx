@@ -101,57 +101,57 @@ export function OverviewPage() {
           title="Footfall"
           value="847"
           change="+12%"
-          trend="up"
-          icon={<Users className="w-5 h-5 text-gray-500" />}
+          changeType="positive"
+          icon={Users}
         />
         <KPICard 
           title="Conversion"
           value="23%"
           change="+5%"
-          trend="up"
-          icon={<TrendingUp className="w-5 h-5 text-gray-500" />}
+          changeType="positive"
+          icon={TrendingUp}
         />
         <KPICard 
           title="Avg Dwell"
           value="15.2m"
           change="+8%"
-          trend="up"
-          icon={<Clock className="w-5 h-5 text-gray-500" />}
+          changeType="positive"
+          icon={Clock}
         />
         <KPICard 
           title="Top Zone"
           value="Tasting"
           change="62% conv"
-          trend="neutral"
-          icon={<MapPin className="w-5 h-5 text-gray-500" />}
+          changeType="neutral"
+          icon={MapPin}
         />
         <KPICard 
           title="Revenue"
           value="€42,350"
           change="+15%"
-          trend="up"
-          icon={<DollarSign className="w-5 h-5 text-gray-500" />}
+          changeType="positive"
+          icon={DollarSign}
         />
         <KPICard 
           title="Wine Sessions"
           value="47"
           change="+22%"
-          trend="up"
-          icon={<Wine className="w-5 h-5 text-gray-500" />}
+          changeType="positive"
+          icon={Wine}
         />
         <KPICard 
           title="Stock Risk"
           value="3 items"
           change="2 critical"
-          trend="down"
-          icon={<Package className="w-5 h-5 text-rose-500" />}
+          changeType="negative"
+          icon={Package}
         />
         <KPICard 
           title="Content Perf."
           value="92%"
           change="+3%"
-          trend="up"
-          icon={<Monitor className="w-5 h-5 text-gray-500" />}
+          changeType="positive"
+          icon={Monitor}
         />
       </div>
 
