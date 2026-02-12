@@ -88,15 +88,24 @@ export function FunnelAnalyticsPage() {
                 </div>
                 
                 {/* Drop-off indicator */}
-                {index < funnelSteps.length - 1 && (
-                  <div className="ml-4 pl-8 mt-2 mb-2 flex items-center gap-2 text-xs text-gray-500">
-                    <TrendingDown className="w-3 h-3 text-rose-500" />
-                    <span>
-                      {funnelSteps[index].visitors - funnelSteps[index + 1].visitors} drop-off 
-                      ({Math.round(((funnelSteps[index].visitors - funnelSteps[index + 1].visitors) / funnelSteps[index].visitors) * 100)}%)
-                    </span>
-                  </div>
-                )}
+                {(() => {
+                  const nextStep = funnelSteps[index + 1];
+                  if (index < funnelSteps.length - 1 && nextStep) {
+                    const currentStep = funnelSteps[index];
+                    if (!currentStep) return null;
+                    const dropOff = currentStep.visitors - nextStep.visitors;
+                    const dropOffPercent = Math.round((dropOff / currentStep.visitors) * 100);
+                    return (
+                      <div className="ml-4 pl-8 mt-2 mb-2 flex items-center gap-2 text-xs text-gray-500">
+                        <TrendingDown className="w-3 h-3 text-rose-500" />
+                        <span>
+                          {dropOff} drop-off ({dropOffPercent}%)
+                        </span>
+                      </div>
+                    );
+                  }
+                  return null;
+                })()}
               </div>
             ))}
           </div>

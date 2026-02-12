@@ -1,4 +1,4 @@
-import { Users, Clock, TrendingUp, AlertCircle, Activity } from 'lucide-react';
+import { Clock, TrendingUp, AlertCircle, Activity } from 'lucide-react';
 
 export function LiveStorePage() {
   const zones = [

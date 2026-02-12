@@ -1,4 +1,4 @@
-import { Target, AlertTriangle, Clock, CheckCircle } from 'lucide-react';
+import { Target, Clock, CheckCircle } from 'lucide-react';
 
 export function StaffIntelligencePage() {
   const alerts = [
